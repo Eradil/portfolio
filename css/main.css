@@ -8,3 +8,24 @@ html,
 body {
   font-family: "DM Sans", sans-serif;
 }
+
+* {
+  border: 1px solid red;
+}
+
+.container {
+  padding: 0 15px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* nav start  */
+
+.nav {
+  background-color: #171718;
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #26292d;
+}
+
+/* nav end  */
