@@ -7,6 +7,21 @@
 html,
 body {
   font-family: "DM Sans", sans-serif;
+  letter-spacing: -0.5px;
+  color: var(--text-color);
+}
+
+:root {
+  --black: #171718;
+  --black-border: #26292d;
+  --white: #fff;
+  --purple: #5c62ec;
+
+  --text-color: var(--black);
+  --dark-bg: var(--black);
+  --dark-border: var(--black-border);
+  --header-text: var(--white);
+  --accent: var(--purple);
 }
 
 /* * {
@@ -22,10 +37,11 @@ body {
 /* nav start  */
 
 .nav {
-  background-color: #171718;
-  color: #fff;
+  letter-spacing: normal;
+  background-color: var(--dark-bg);
+  color: var(--header-text);
   padding: 20px 0;
-  border-bottom: 1px solid #26292d;
+  border-bottom: 1px solid var(--dark-border);
 }
 
 .nav-row {
@@ -38,7 +54,7 @@ body {
 }
 
 .logo {
-  color: #fff;
+  color: var(--white);
   font-size: 24px;
   font-family: "Poppins", sans-serif;
 }
@@ -56,7 +72,11 @@ body {
 }
 
 .nav-list__link {
-  color: white;
+  color: var(--header-textd);
+  transition: opacity 0.2s ease-in;
+}
+.nav-list__link:hover {
+  opacity: 0.8;
 }
 .nav-list__link--link {
   position: relative;
@@ -66,7 +86,77 @@ body {
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #5c62ec;
+  background-color: var(--accent);
 }
 
 /* nav end  */
+/* header start*/
+
+.header {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 695px;
+
+  background-color: var(--dark-bg);
+  background-image: url(/image/Abstract.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  color: var(--header-text);
+  text-align: center;
+}
+
+.header__wrapper {
+  padding: 0 15px;
+  max-width: 660px;
+}
+
+.header__title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.header__title strong {
+  font-size: 60px;
+  font-weight: 700;
+}
+.header__title em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.header__text {
+  font-size: 18px;
+  line-height: 1.333;
+  margin-bottom: 40px;
+}
+.header__text p + p {
+  margin-top: 0.5em;
+}
+
+.button {
+  display: inline-block;
+  height: 48px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: var(--white);
+  letter-spacing: 0.15px;
+  background-color: var(--accent);
+
+  transition: opacity 0.2s ease-in;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+/* header end*/
